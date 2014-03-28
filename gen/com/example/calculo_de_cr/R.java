@@ -52,7 +52,7 @@ public final class R {
         public static final int notaEDD1=0x7f080044;
         public static final int notaEDD2=0x7f08001b;
         public static final int notaEMP=0x7f080027;
-        public static final int notaEletiva=0x7f08002f;
+        public static final int notaEletiva1=0x7f08002f;
         public static final int notaEletiva2=0x7f080049;
         public static final int notaEletiva3=0x7f08001f;
         public static final int notaEletiva4=0x7f080028;
@@ -89,7 +89,7 @@ public final class R {
         public static final int textView2=0x7f080001;
         public static final int textView3=0x7f080004;
         public static final int textView4=0x7f080021;
-        public static final int valorEletiva=0x7f080030;
+        public static final int valorEletiva1=0x7f080030;
         public static final int valorEletiva2=0x7f08004a;
         public static final int valorEletiva3=0x7f080020;
         public static final int valorEletiva4=0x7f080029;

@@ -163,7 +163,7 @@
         android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/notaEletiva"
+        android:id="@+id/notaEletiva1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TextView10"
@@ -173,7 +173,7 @@
         android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/valorEletiva"
+        android:id="@+id/valorEletiva1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TextView10"
