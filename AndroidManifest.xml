@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.calculo_de_cr"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.calculo_de_cr.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.Tela2"
+            android:label="@string/title_activity_tela2" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.PrimeiroSemestre"
+            android:label="@string/title_activity_primeiro_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.SegundoSemestre"
+            android:label="@string/title_activity_segundo_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.TerceiroSemestre"
+            android:label="@string/title_activity_terceiro_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.QuartoSemestre"
+            android:label="@string/title_activity_quarto_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.QuintoSemestre"
+            android:label="@string/title_activity_quinto_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.SextoSemestre"
+            android:label="@string/title_activity_sexto_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.SetimoSemestre"
+            android:label="@string/title_activity_setimo_semestre" >
+        </activity>
+        <activity
+            android:name="com.example.calculo_de_cr.OitavoSemestre"
+            android:label="@string/title_activity_oitavo_semestre" >
+        </activity>
+    </application>
+
+</manifest>

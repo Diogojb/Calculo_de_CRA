@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SextoSemestre" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/Relatorio"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/SextoSem"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="58dp"
+        android:text="@string/PM"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:text="@string/PCS_SGBD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView06"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:text="@string/BtnAnterior" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="@string/BtnCalcCRA" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView02"
+        android:text="@string/ADF"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_below="@+id/TextView04"
+        android:text="@string/Optativa"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView08"
+        android:text="@string/Optativa"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/TextView02"
+        android:text="@string/BtnProximo" />
+
+    <EditText
+        android:id="@+id/notaPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/notaPCS_SGBD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView02"
+        android:layout_alignLeft="@+id/notaPM"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/notaADF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/notaOP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView08"
+        android:layout_alignLeft="@+id/notaPCS_SGBD"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/notaOP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView06"
+        android:layout_alignLeft="@+id/notaADF"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/valorOP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView08"
+        android:layout_alignRight="@+id/button3"
+        android:layout_toRightOf="@+id/TextView04"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/valorOP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView06"
+        android:layout_alignRight="@+id/valorOP1"
+        android:layout_toRightOf="@+id/TextView04"
+        android:ems="10"
+        android:inputType="number" />
+
+</RelativeLayout>
