@@ -10,33 +10,6 @@ import android.widget.EditText;
 
 public class TerceiroSemestre extends Activity {
 
-	public double notaBD1;
-	public double notaEDD1;
-	public double notaSO;
-	public double notaEDC;
-	public double notaCalc2;
-	public double notaProb;
-	public double notaEletiva2;
-	public int valorEletiva2;
-	public void guardaValores3S(){
-		EditText texto1 = (EditText) findViewById(R.id.notaBD1); 
-		EditText texto2 = (EditText) findViewById(R.id.notaEDD1); 
-		EditText texto3 = (EditText) findViewById(R.id.notaSO); 
-		EditText texto4 = (EditText) findViewById(R.id.notaEDC); 
-		EditText texto5 = (EditText) findViewById(R.id.notaCalc2); 
-		EditText texto6 = (EditText) findViewById(R.id.notaProb);
-		EditText texto7 = (EditText) findViewById(R.id.notaEletiva2);
-		EditText texto8 = (EditText) findViewById(R.id.valorEletiva2);
-		notaBD1 = Double.parseDouble(texto1.getText().toString()); 
-		notaEDD1 = Double.parseDouble(texto2.getText().toString());
-		notaSO = Double.parseDouble(texto3.getText().toString()); 
-		notaEDC = Double.parseDouble(texto4.getText().toString());
-		notaCalc2 = Double.parseDouble(texto5.getText().toString()); 
-		notaProb = Double.parseDouble(texto6.getText().toString());
-		notaEletiva2 = Double.parseDouble(texto7.getText().toString());
-		valorEletiva2 = Integer.parseInt(texto8.getText().toString());
-
-	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,9 +37,35 @@ public class TerceiroSemestre extends Activity {
 		 Button calcula = (Button) findViewById(R.id.button3); 
 		 calcula.setOnClickListener(new View.OnClickListener() { 
 		 public void onClick(View v) {
-			 //guardaValores3S();
+			 //Transformar isso em um metodo que retorne a média
+			 //Colocar a carga horaria como uma variável estática ?
+				EditText texto1 = (EditText) findViewById(R.id.notaBD1); 
+				EditText texto2 = (EditText) findViewById(R.id.notaEDD1); 
+				EditText texto3 = (EditText) findViewById(R.id.notaSO); 
+				EditText texto4 = (EditText) findViewById(R.id.notaEDC); 
+				EditText texto5 = (EditText) findViewById(R.id.notaCalc2); 
+				EditText texto6 = (EditText) findViewById(R.id.notaProb);
+				EditText texto7 = (EditText) findViewById(R.id.notaEletiva2);
+				EditText texto8 = (EditText) findViewById(R.id.valorEletiva2);
+				double notaBD1 = Double.parseDouble(texto1.getText().toString()); 
+				double notaEDD1 = Double.parseDouble(texto2.getText().toString());
+				double notaSO = Double.parseDouble(texto3.getText().toString()); 
+				double notaEDC = Double.parseDouble(texto4.getText().toString());
+				double notaCalc2 = Double.parseDouble(texto5.getText().toString()); 
+				double notaProb = Double.parseDouble(texto6.getText().toString());
+				double notaEletiva2 = Double.parseDouble(texto7.getText().toString());
+				int  valorEletiva2 = Integer.parseInt(texto8.getText().toString());
+				
+				int cargaCumprida = (4 + 4 + 4 + 4 + 4 + 4 + valorEletiva2);
+
+				double crSemestre = (notaBD1 * 4 + notaEDD1 * 4 + notaSO * 4
+						+ notaEDC * 4 + notaCalc2 * 4 + notaProb *4 + notaEletiva2 * valorEletiva2)
+						/ cargaCumprida;
+			 
 		 Intent i = new Intent(TerceiroSemestre.this, Tela2.class); 
 		 Bundle params = new Bundle(); 
+	     String resposta ="CRA: " +crSemestre + "Carga Cumprida: " + cargaCumprida;
+			// params.putString("mensagem", resposta);
 		 i.putExtras(params); 
 		 startActivity(i); 
 		 	} 

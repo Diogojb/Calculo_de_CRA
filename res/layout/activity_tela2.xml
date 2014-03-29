@@ -18,32 +18,22 @@
         android:text="@string/CargaCurso"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/Cargacomprida"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="@string/CargaCompQuantidade" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="24dp"
-        android:text="@string/CargaComp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="52dp"
+        android:text="@string/BtnAnterior" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="43dp"
         android:text="@string/CRA"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -52,24 +42,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView4"
-        android:layout_alignRight="@+id/textView2"
+        android:layout_alignRight="@+id/textView1"
         android:text="@string/CRACacl" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="88dp"
-        android:layout_toLeftOf="@+id/calcCRA"
-        android:text="@string/BtnAnterior" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_alignLeft="@+id/Cargacomprida"
+        android:layout_alignLeft="@+id/calcCRA"
         android:text="@string/InlNotas" />
 
 </RelativeLayout>

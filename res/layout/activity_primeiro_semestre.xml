@@ -46,23 +46,6 @@
         android:text="@string/TP1"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView10"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="54dp"
-        android:text="@string/BtnAnterior" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/textView2"
-        android:text="@string/BtnCalcCRA" />
-
     <TextView
         android:id="@+id/TextView10"
         android:layout_width="wrap_content"
@@ -98,15 +81,6 @@
         android:layout_below="@+id/TextView08"
         android:text="@string/MB"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/button3"
-        android:text="@string/BtnProximo" />
 
     <EditText
         android:id="@+id/notaFSI"
@@ -170,5 +144,32 @@
         android:layout_below="@+id/TextView08"
         android:ems="10"
         android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView08"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/BtnAnterior" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:text="@string/BtnCalcCRA" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/notaTPD"
+        android:text="@string/BtnProximo" />
 
 </RelativeLayout>

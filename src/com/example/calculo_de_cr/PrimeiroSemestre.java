@@ -9,62 +9,66 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class PrimeiroSemestre extends Activity {
-
-	public double notaFSI;
-	public double notaTP1;
-	public double notaDPW;
-	public double notaOC;
-	public double notaMB;
-	public double notaTPD;
-	public void guardaValores1S(){
-		EditText texto1 = (EditText) findViewById(R.id.notaFSI); 
-		EditText texto2 = (EditText) findViewById(R.id.notaTP1); 
-		EditText texto3 = (EditText) findViewById(R.id.notaDPW); 
-		EditText texto4 = (EditText) findViewById(R.id.notaOC); 
-		EditText texto5 = (EditText) findViewById(R.id.notaMB); 
-		EditText texto6 = (EditText) findViewById(R.id.notaTPD); 
-		notaFSI = Double.parseDouble(texto1.getText().toString()); 
-		notaTP1 = Double.parseDouble(texto2.getText().toString());
-		notaFSI = Double.parseDouble(texto3.getText().toString()); 
-		notaTP1 = Double.parseDouble(texto4.getText().toString());
-		notaFSI = Double.parseDouble(texto5.getText().toString()); 
-		notaTP1 = Double.parseDouble(texto6.getText().toString());
-
-	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_primeiro_semestre);
-		
-		Button anterior = (Button) findViewById(R.id.button1); 
-		 anterior.setOnClickListener(new View.OnClickListener() { 
-		 public void onClick(View v) { 		 
-		 Intent i = new Intent(PrimeiroSemestre.this, Tela2.class); 
-		 Bundle params = new Bundle(); 
-		 i.putExtras(params); 
-		 startActivity(i); 
-		 	} 
-		 }); 
-		 Button proximo = (Button) findViewById(R.id.button2); 
-		 proximo.setOnClickListener(new View.OnClickListener() { 
-		 public void onClick(View v) { 		 
-	     //guardaValores1S();
-		 Intent i = new Intent(PrimeiroSemestre.this, SegundoSemestre.class); 
-		 Bundle params = new Bundle(); 
-		 i.putExtras(params); 
-		 startActivity(i); 
-		 	} 
-		 }); 
-		 Button calcula = (Button) findViewById(R.id.button3); 
-		 calcula.setOnClickListener(new View.OnClickListener() { 
-		 public void onClick(View v) { 		 
-		 //guardaValores1S();
-		 Intent i = new Intent(PrimeiroSemestre.this, Tela2.class); 
-		 Bundle params = new Bundle(); 
-		 i.putExtras(params); 
-		 startActivity(i); 
-		 	} 
-		 }); 
+
+		Button anterior = (Button) findViewById(R.id.button1);
+		anterior.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent i = new Intent(PrimeiroSemestre.this, Tela2.class);
+				Bundle params = new Bundle();
+				i.putExtras(params);
+				startActivity(i);
+			}
+		});
+
+		Button proximo = (Button) findViewById(R.id.button2);
+		proximo.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// guardaValores1S();
+				Intent i = new Intent(PrimeiroSemestre.this,
+						SegundoSemestre.class);
+				Bundle params = new Bundle();
+				i.putExtras(params);
+				startActivity(i);
+			}
+		});
+
+		Button calcula = (Button) findViewById(R.id.button3);
+		calcula.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+
+				EditText notaFsi = (EditText) findViewById(R.id.notaFSI);
+				EditText notaTp1 = (EditText) findViewById(R.id.notaTP1);
+				EditText notaDpw = (EditText) findViewById(R.id.notaDPW);
+				EditText notaOc = (EditText) findViewById(R.id.notaOC);
+				EditText notaMb = (EditText) findViewById(R.id.notaMB);
+				EditText notaTpd = (EditText) findViewById(R.id.notaTPD);
+
+				double fsi = Double.parseDouble(notaFsi.getText().toString());
+				double tp1 = Double.parseDouble(notaTp1.getText().toString());
+				double dpw = Double.parseDouble(notaDpw.getText().toString());
+				double oc = Double.parseDouble(notaOc.getText().toString());
+				double mb = Double.parseDouble(notaMb.getText().toString());
+				double tpd = Double.parseDouble(notaTpd.getText().toString());
+
+				int cargaCumprida = (4 + 6 + 4 + 6 + 2 + 3);
+
+				double crSemestre = (fsi * 4 + tp1 * 6 + dpw * 4 + oc * 6 + mb
+						* 2 + tpd * 3)
+						/ cargaCumprida;
+
+				Intent i = new Intent(PrimeiroSemestre.this, Tela2.class);
+				Bundle params = new Bundle();
+				String resposta ="CRA: " +crSemestre + "Carga Cumprida: " +cargaCumprida;
+				params.putString("mensagem", resposta);
+				i.putExtras(params);
+				startActivity(i);
+			}
+		});
 	}
 
 	@Override

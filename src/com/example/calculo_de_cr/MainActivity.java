@@ -17,7 +17,7 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
-	public void checaMatricula(String matricula){
+	private void checaMatricula(String matricula){
 		if(new File(matricula+".txt").exists()){
 			try {
 				 FileReader arq = new FileReader(matricula+".txt"); 
